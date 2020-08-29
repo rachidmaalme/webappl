@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Affichage d'un profil{% endblock %}
+{% block bodyid %}showProfilePage{% endblock %}
+{% block content %}
+
+<hl>Affichage d'un profil</hl>
+<dl class="fieldlist">
+
+<dt>First and last name :</dt>
+<dd>{{ user_to_show.prenom}} {{ user_to_show.nom }}</dd>
+<dt>birthday : </dt>
+<dd>{{ user_to_show.date_de_naissance }}</dd>
+
+<dt>email :</dt>
+<dd>{{ user_to_show.courriel }}</dd>
+
+<P id="showProfileNavigationButtons">
+<a href="{% url 'ChatApp:welcome'  %}" class="buttonlink">Return</a>
+</P>
+{% endblock %}

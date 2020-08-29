@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Modification de mon profil {% endblock %}
+{% block bodyld %} modifyProfilePage {% endblock %}
+{% block content %}
+<hl>Set up Profil</hl>
+
+<form action= "{% url 'ChatApp:modifyP'  %}" method="get">
+{{ form.as_p }}
+<P>
+<input type="submit" value="Modifier" />
+</P>
+</form>
+{% endblock %}

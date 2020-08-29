@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block bodyld %} userProfilePage {% endblock%}
+
+{% block content %}
+<hl>Create account</hl>
+<form method="get"  enctype="multipart/form-data">
+
+  {% csrf_token %}
+  {{ form.as_p }}
+  <Script type="text/javascript">
+    $(document).ready(function(){
+
+      $("input#id_courriel").focusout(checkEmailField);
+});
+
+function checkEmailField() {
+alert( ' Courriel introduit . On va maintenant le valider . ');}
+</script>
+<P>
+  <input type="submit" value="create account ...." />
+</P>
+</form>
+{% endblock %}

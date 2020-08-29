@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Connexion {% endblock %}
+{% block bodyid %} 1ogin {% endblock %}
+
+{% block content %}
+
+<form action= "{% url 'ChatApp:login'  %}" method="post" >
+
+
+{% csrf_token %}
+  {{ form.as_p }}
+  <p>
+    <input type="submit" value="Se connecter" />
+
+    <a href="{% url 'ChatApp:register'  %}"> Créer un compte</a>
+    </P>
+
+  </form>
+{% endblock %}

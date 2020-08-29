@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>you are online </title>
+</head>
+
+{% block headerContent %}
+  <center><div >
+  <h1> <span style="color :#DEB887">{{ logged_user.prenom }} {{ logged_user.nom }},
+      welcome to : </h1> </span> <h1>LLFEO</h1>  </P>
+  </div> </center>
+
+  <section id="messagelist">
+  <form action=" {% url 'ChatApp:welcome'  %} " method="get" class="inlineForm">
+  <label for="newMessagelnput"> Express your self : </label>
+  <input type="text" name="newMessage" id="newMessagelnput" />
+  <input type="submit" value="Publier" />
+  </form>
+
+  <ul>
+  {% for message in friendMessages %}
+  <li>
+  <P>
+  <a href="showProfile?userToShow()={{ message.auteur.amis.id }}">{{ message.auteur.prenom}}
+  {{message.auteur.nom }}</a> says :
+  </P>
+  <p>{{ message.contenu }}</P>
+  </li>
+  {% endfor %}
+
+  </ul>
+  </section>
+
+
+  <section id="friendlist">
+  <P class="title"> <h1>my friends </h1> </P>
+  <P><a href="{% url 'ChatApp:addfriend'  %}" class="buttonlink">Add friends</a></P>
+  <ul>
+
+  {% for ami in logged_user.amis.all %}
+  <li><a href="???">{{ami.prenom}} {{ ami.nom }}</a></li>
+  {% endfor %}
+  </ul>
+  </secton>
+
+<center> <p id="profilelinks">
+<a href="showProfile?userToShow()={{ logged_user.id }}" class="buttonlink">show my profile </a>
+<a href="{% url 'ChatApp:modifyP'  %}" class="buttonlink">Set up my profiel</a>
+</P>
+</center>
+
+{% endblock %}
+
+</html>

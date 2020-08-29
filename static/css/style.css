@@ -1,0 +1,135 @@
+
+body#loginpage, section#content {
+position: absolute;
+top : 150px;
+left: 50%;
+width : 500px;
+margin: 0 0 0 -250px;
+padding : 10;
+}
+__________________________________welcome effect _____________________
+
+img{
+border: 0px solid #000000;
+border-radius: 2 px;
+width: 50px
+padding:2px;
+
+}
+
+body#welcomePage header p#name {
+font-size : 22px;
+margin: 20px 0 0 70px;
+}
+
+body#welcomePage header p#function {
+margin: 0 0 0 70px ;
+}
+
+
+body#welcomePage header p#profilelinks {
+position: absolute;
+right : 40px;
+top : 25px;
+}
+
+
+a.buttonlink {
+border-style : solid;
+border-width : 1px;
+border-color : ##000000 ##000000 ##000000 ##000000;
+background-color : ##000000 ;
+color : #FFFFFF;
+padding : 2px 15px 3px 15px;
+text-align: center;
+text-decoration: none;
+
+}
+
+body#welcomePage section#content {
+width: 800px;
+margin: 0 0 0 -400px;
+}
+body#welcomePage section#messagelist {
+position: absolute;
+width: 600px;
+background-color: red;
+}
+body#welcomePage section#friendlist {
+position: absolute;
+width: 200px;
+right:0;
+background-color : yellow;
+}
+__________________________________welcome
+form.inlineForm label {
+display: inline;
+float: none;
+padding:0;
+}
+form.inlineForm input[type="text"] {
+display : inline-block;
+width: 150px;
+}
+form.inlineForm input[type="submit"] {
+margin : 0;
+}
+section#messagelist ul {
+margin : 20px 0 0 0;
+list-style: none ;
+padding: 0;
+}
+
+section#messagelist ulli {
+margin-bottom : 10px;
+}
+section#messagelist ulli.p {
+margin : 8px 0 0 0;
+}
+
+
+
+
+body#welcomePage section#friendlist {
+position : absolute;
+width: 180px;
+right:0;
+padding: 10px;
+background-color: #DCE0ED;
+}
+section#friendlist p.title {
+font-size : 22px;
+}
+color : #3b5998;
+border-bottom: lpx solid #3b5998;
+margin : 0 0 20px O;
+section#friendlist ul {
+margin : 20px 0 0 0;
+list-style: none ;
+padding : 0;
+}
+section#friendlist ul {
+margin : 0 0 5px  0 ;
+}
+
+
+
+#shooowprofiiile
+
+dl.fieldlist dt {
+display: block;
+width : 250px;
+float : left;
+text-align : right;
+padding : 0 10px 0 0;
+font-weight : bold;
+}
+dl.fieldlist dd {
+display : block;
+width : 450px;
+padding : 0px;
+margin : 0 0 10px 0;
+}
+p#showProfileNavigationButtons {
+margin : 20px 0 0 260px;
+}
